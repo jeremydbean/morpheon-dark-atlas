@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Morpheon Dark Atlas</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="tabs">
+    <button class="tab active" data-tab="general">General</button>
+    <button class="tab" data-tab="site">Per-Site</button>
+    <button class="tab" data-tab="advanced">Advanced</button>
+  </div>
+
+  <div id="tab-content">
+    <section id="general" class="tab-section active">
+      <label><input type="checkbox" id="enableDark"> Enable Dark Mode</label><br>
+      <label>Preset:
+        <select id="preset">
+          <option value="morpheon">Morpheon Dark</option>
+          <option value="charcoal">Charcoal</option>
+          <option value="slate">Slate</option>
+          <option value="midnight">Midnight</option>
+          <option value="obsidian">Obsidian</option>
+        </select>
+      </label><br>
+      <button id="applyTheme">🌌 Apply Selected Preset</button>
+      <button id="resetTheme">♻️ Reset</button>
+    </section>
+
+    <section id="site" class="tab-section">
+      <p><b>Current Site:</b> <span id="domain"></span></p>
+      <textarea id="siteCSS" placeholder="Custom CSS for this site..."></textarea>
+      <button id="saveSite">💾 Save</button>
+      <button id="clearSite">🗑️ Clear</button>
+    </section>
+
+    <section id="advanced" class="tab-section">
+      <h3>Fine-tuning</h3>
+      <label>Brightness: <input type="range" id="brightness" min="0.8" max="1.2" step="0.05" value="1"></label><br>
+      <label>Contrast: <input type="range" id="contrast" min="0.8" max="1.2" step="0.05" value="1"></label><br>
+      <label>Sepia: <input type="range" id="sepia" min="0" max="0.4" step="0.05" value="0"></label><br>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
