@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Morpheon Dark Atlas",
+  "version": "3.5",
+  "description": "A clean dark theme with presets, background darkening only, inspired by Morpheon Dark and Dark Reader.",
+  "permissions": ["storage", "scripting", "tabs", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}
