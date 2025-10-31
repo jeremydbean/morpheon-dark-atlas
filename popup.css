@@ -1,0 +1,34 @@
+body {
+  background:#121212;
+  color:#e0e0e0;
+  font-family:Arial,sans-serif;
+  width:320px;
+  margin:0;
+  padding:10px;
+}
+#tabs {
+  display:flex;
+  border-bottom:1px solid #333;
+  margin-bottom:5px;
+}
+.tab {
+  flex:1;
+  background:#2d2d2d;
+  border:none;
+  padding:6px;
+  color:#e0e0e0;
+  cursor:pointer;
+}
+.tab.active { background:#4285f4; color:#fff; }
+.tab-section { display:none; }
+.tab-section.active { display:block; }
+textarea {
+  width:100%; height:120px; background:#1e1e1e; color:#e0e0e0;
+  border:1px solid #333; resize:vertical; margin-bottom:5px;
+}
+button {
+  background:#2d2d2d; border:1px solid #333; color:#e0e0e0;
+  border-radius:4px; padding:5px 10px; margin:4px 2px; cursor:pointer;
+}
+button:hover { background:#4285f4; color:#fff; }
+input[type=range] { width:100%; }
